@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-// 配置向 fts server 的請求
+// 配置向 fts demo server 的請求
 const request = axios.create({
-    baseURL:'/fts',
+    baseURL:'/tfs-demo',
     timeout: 60000
 })
 
@@ -14,8 +14,7 @@ request.interceptors.request.use(config => {
     // 從 local storage 中讀取 jwt token 帶入 header ( 若有的話 )
     let jwtToken : string | null = localStorage.getItem('JwtToken')
     if(jwtToken != null)
-        config.headers.set("Authorization", jwtToken)
-
+        config.headers.set("JwtToken", jwtToken)
     return config
 })
 
