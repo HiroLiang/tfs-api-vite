@@ -4,7 +4,7 @@ import {NNotificationProvider} from "naive-ui";
 </script>
 
 <template>
-  <n-notification-provider :placement="'top-right'" :max="8">
+  <n-notification-provider :placement="'top-right'" :max="3">
     <RouterView/>
   </n-notification-provider>
 </template>

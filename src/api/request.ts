@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // 配置向 fts demo server 的請求
 const request = axios.create({
-    baseURL:'/demo',
+    baseURL:'/tfs-demo',
     timeout: 60000
 })
 

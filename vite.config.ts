@@ -4,12 +4,13 @@ import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  base: '/tfs-demo/',
   server: {
     proxy: {
-      '/demo': {
-        target: 'http://localhost:8080/tfs-api/demo',
+      '/tfs-demo': {
+        target: 'http://localhost:8080/tfs-demo',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/demo/, '')
+        rewrite: (path) => path.replace(/^\/tfs-demo/, '')
       }
     }
   }
